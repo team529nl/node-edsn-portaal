@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== FileExchange Web Service Description File ===== -->
+<!-- ================================================================== -->
+<!--
+   Web service agency: nedu 
+   Web service version: 1.0.4
+   Web service date: 27 May 2014
+
+   Copyright (C) nedu (2014). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and nedu DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ws="urn:nedu:edsn:service:fileexchange:1:standard" targetNamespace="urn:nedu:edsn:service:fileexchange:1:standard" xmlns:ccma1="urn:nedu:edsn:data:fileexchangerequest:1:standard" xmlns:ccma2="urn:nedu:edsn:data:fileexchangeresponse:1:standard" xmlns:ccma3="urn:nedu:edsn:data:fileexchangesignoffnotification:1:standard" xmlns:ccma4="urn:nedu:edsn:data:fileexchangesignoffacknowledgement:1:standard" xmlns:ccma5="urn:nedu:edsn:data:fileexchangenotification:1:standard" xmlns:ccma6="urn:nedu:edsn:data:fileexchangeacknowledgement:1:standard" xmlns:ccma7="urn:nedu:edsn:data:fileexchangeresultrequest:1:standard" xmlns:ccma8="urn:nedu:edsn:data:fileexchangeresultresponse:1:standard" xmlns:ccma9="urn:edsn:edsn:data:soapfault:1:standard" >
+<types>
+<xsd:schema>
+<xsd:import schemaLocation="FileExchangeRequest_1p3.xsd" namespace="urn:nedu:edsn:data:fileexchangerequest:1:standard" />
+<xsd:import schemaLocation="FileExchangeResponse_1p4.xsd" namespace="urn:nedu:edsn:data:fileexchangeresponse:1:standard" />
+<xsd:import schemaLocation="FileExchangeSignOffNotification_1p1.xsd" namespace="urn:nedu:edsn:data:fileexchangesignoffnotification:1:standard" />
+<xsd:import schemaLocation="FileExchangeSignOffAcknowledgement_1p1.xsd" namespace="urn:nedu:edsn:data:fileexchangesignoffacknowledgement:1:standard" />
+<xsd:import schemaLocation="FileExchangeNotification_1p4.xsd" namespace="urn:nedu:edsn:data:fileexchangenotification:1:standard" />
+<xsd:import schemaLocation="FileExchangeAcknowledgement_1p1.xsd" namespace="urn:nedu:edsn:data:fileexchangeacknowledgement:1:standard" />
+<xsd:import schemaLocation="FileExchangeResultRequest_1p1.xsd" namespace="urn:nedu:edsn:data:fileexchangeresultrequest:1:standard" />
+<xsd:import schemaLocation="FileExchangeResultResponse_1p1.xsd" namespace="urn:nedu:edsn:data:fileexchangeresultresponse:1:standard" />
+<xsd:import schemaLocation="SOAPFault_1p0.xsd" namespace="urn:edsn:edsn:data:soapfault:1:standard" />
+</xsd:schema>
+</types>
+<message name="FileExchangeRequestEnvelope">
+<part name="part1" element="ccma1:FileExchangeRequestEnvelope"/>
+</message>
+<message name="FileExchangeResponseEnvelope">
+<part name="part1" element="ccma2:FileExchangeResponseEnvelope"/>
+</message>
+<message name="FileExchangeSignOffNotificationEnvelope">
+<part name="part1" element="ccma3:FileExchangeSignOffNotificationEnvelope"/>
+</message>
+<message name="FileExchangeSignOffAcknowledgementEnvelope">
+<part name="part1" element="ccma4:FileExchangeSignOffAcknowledgementEnvelope"/>
+</message>
+<message name="FileExchangeNotificationEnvelope">
+<part name="part1" element="ccma5:FileExchangeNotificationEnvelope"/>
+</message>
+<message name="FileExchangeAcknowledgementEnvelope">
+<part name="part1" element="ccma6:FileExchangeAcknowledgementEnvelope"/>
+</message>
+<message name="FileExchangeResultRequestEnvelope">
+<part name="part1" element="ccma7:FileExchangeResultRequestEnvelope"/>
+</message>
+<message name="FileExchangeResultResponseEnvelope">
+<part name="part1" element="ccma8:FileExchangeResultResponseEnvelope"/>
+</message>
+<message name="SOAPFault">
+<part name="part1" element="ccma9:SOAPFault"/>
+</message>
+<portType name="FileExchangePortType">
+<operation name="FileExchangeRequest">
+<input message="ws:FileExchangeRequestEnvelope"/>
+<output message="ws:FileExchangeResponseEnvelope"/>
+<fault name="SOAPFault" message="ws:SOAPFault"/>
+</operation>
+<operation name="FileExchangeSignOff">
+<input message="ws:FileExchangeSignOffNotificationEnvelope"/>
+<output message="ws:FileExchangeSignOffAcknowledgementEnvelope"/>
+<fault name="SOAPFault" message="ws:SOAPFault"/>
+</operation>
+<operation name="FileExchangeNotification">
+<input message="ws:FileExchangeNotificationEnvelope"/>
+<output message="ws:FileExchangeAcknowledgementEnvelope"/>
+<fault name="SOAPFault" message="ws:SOAPFault"/>
+</operation>
+<operation name="FileExchangeResult">
+<input message="ws:FileExchangeResultRequestEnvelope"/>
+<output message="ws:FileExchangeResultResponseEnvelope"/>
+<fault name="SOAPFault" message="ws:SOAPFault"/>
+</operation>
+</portType>
+<binding name="FileExchangeBinding" type="ws:FileExchangePortType">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="FileExchangeRequest">
+<soap:operation soapAction="urn:FileExchangeRequestEnvelope" style="document"/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="SOAPFault">
+<soap:fault name="SOAPFault" use="literal"/>
+</fault>
+</operation>
+<operation name="FileExchangeSignOff">
+<soap:operation soapAction="urn:FileExchangeSignOffNotificationEnvelope" style="document"/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="SOAPFault">
+<soap:fault name="SOAPFault" use="literal"/>
+</fault>
+</operation>
+<operation name="FileExchangeNotification">
+<soap:operation soapAction="urn:FileExchangeNotificationEnvelope" style="document"/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="SOAPFault">
+<soap:fault name="SOAPFault" use="literal"/>
+</fault>
+</operation>
+<operation name="FileExchangeResult">
+<soap:operation soapAction="urn:FileExchangeResultRequestEnvelope" style="document"/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="SOAPFault">
+<soap:fault name="SOAPFault" use="literal"/>
+</fault>
+</operation>
+</binding>
+<service name="FileExchange">
+<port name="FileExchangePort" binding="ws:FileExchangeBinding">
+<soap:address location="http://localhost:9000/b2b/synchroon/ResponderFileExchangeInboxRespondingActivity"/>
+</port>
+</service>
+</definitions>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== ContractData Web Service Description File ===== -->
+<!-- ================================================================== -->
+<!--
+   Web service agency: nedu
+   Web service version: 2.0.0
+   Web service date: 18 April 2017
+
+   Copyright (C) nedu (2017). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and nedu DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:ws="urn:nedu:edsn:service:contractdata:2:standard"
+             targetNamespace="urn:nedu:edsn:service:contractdata:2:standard"
+             xmlns:ccma1="urn:nedu:edsn:data:contractdatarequest:1:standard"
+             xmlns:ccma2="urn:nedu:edsn:data:contractdataresponse:1:standard"
+             xmlns:ccma3="urn:edsn:edsn:data:soapfault:1:standard">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="ContractDataRequest_1p1.xsd"
+                  namespace="urn:nedu:edsn:data:contractdatarequest:1:standard"/>
+      <xsd:import schemaLocation="ContractDataResponse_1p2.xsd"
+                  namespace="urn:nedu:edsn:data:contractdataresponse:1:standard"/>
+      <xsd:import schemaLocation="SOAPFault_1p0.xsd"
+                  namespace="urn:edsn:edsn:data:soapfault:1:standard"/>
+    </xsd:schema>
+  </types>
+  <message name="ContractDataRequestEnvelope">
+    <part name="part1" element="ccma1:ContractDataRequestEnvelope"/>
+  </message>
+  <message name="ContractDataResponseEnvelope">
+    <part name="part1" element="ccma2:ContractDataResponseEnvelope"/>
+  </message>
+  <message name="SOAPFault">
+    <part name="part1" element="ccma3:SOAPFault"/>
+  </message>
+  <portType name="ContractDataPortType">
+    <operation name="ContractData">
+      <input message="ws:ContractDataRequestEnvelope"/>
+      <output message="ws:ContractDataResponseEnvelope"/>
+      <fault name="SOAPFault" message="ws:SOAPFault"/>
+    </operation>
+  </portType>
+  <binding name="ContractDataBinding" type="ws:ContractDataPortType">
+    <soap:binding style="document"
+                  transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="ContractData">
+      <soap:operation soapAction="urn:ContractData" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOAPFault">
+        <soap:fault name="SOAPFault" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="ContractDataService">
+    <port name="ContractDataPort" binding="ws:ContractDataBinding">
+      <soap:address
+        location="http://localhost:9000/b2b/synchroon/ResponderContractDataRespondingActivity"/>
+    </port>
+  </service>
+</definitions>

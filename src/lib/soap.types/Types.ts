@@ -1,0 +1,11 @@
+export enum ContactTypeIdentifier {
+  RNB_ORG="DDM_O",
+  RNB_MARKTPARTIJ="DDM_M",
+  LV_ORG="DDQ_O",
+  LV_MARKTPARTIJ="DDQ_M",
+  PV_ORG="DDK_O",
+  PV_MARKTPARTIJ="DDK_M",
+  MV_ORG="MDR_O",
+  MV_MARKTPARTIJ="MDR_M",
+  EDSN="EDSN"
+}

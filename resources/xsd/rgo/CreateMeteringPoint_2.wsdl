@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== CreateMeteringPoint Web Service Description File ===== -->
+<!-- ================================================================== -->
+<!--
+   Web service agency: cmf
+   Web service version: 2.0.1
+   Web service date: 11 September 2017
+
+   Copyright (C) cmf (2017). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and cmf DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:ws="urn:cmf:edsn:service:createmeteringpoint:2:standard"
+             targetNamespace="urn:cmf:edsn:service:createmeteringpoint:2:standard"
+             xmlns:ccma1="urn:cmf:edsn:data:createmeteringpointrequest:2:standard"
+             xmlns:ccma2="urn:cmf:edsn:data:createmeteringpointresponse:2:standard"
+             xmlns:ccma3="urn:edsn:edsn:data:soapfault:1:standard">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="CreateMeteringPointRequest_2p1.xsd"
+                  namespace="urn:cmf:edsn:data:createmeteringpointrequest:2:standard"/>
+      <xsd:import schemaLocation="CreateMeteringPointResponse_2p0.xsd"
+                  namespace="urn:cmf:edsn:data:createmeteringpointresponse:2:standard"/>
+      <xsd:import schemaLocation="SOAPFault_1p0.xsd"
+                  namespace="urn:edsn:edsn:data:soapfault:1:standard"/>
+    </xsd:schema>
+  </types>
+  <message name="CreateMeteringPointRequestEnvelope">
+    <part name="part1" element="ccma1:CreateMeteringPointRequestEnvelope"/>
+  </message>
+  <message name="CreateMeteringPointResponseEnvelope">
+    <part name="part1" element="ccma2:CreateMeteringPointResponseEnvelope"/>
+  </message>
+  <message name="SOAPFault">
+    <part name="part1" element="ccma3:SOAPFault"/>
+  </message>
+  <portType name="CreateMeteringPointPortType">
+    <operation name="CreateMeteringPointRequest">
+      <input message="ws:CreateMeteringPointRequestEnvelope"/>
+      <output message="ws:CreateMeteringPointResponseEnvelope"/>
+      <fault name="SOAPFault" message="ws:SOAPFault"/>
+    </operation>
+  </portType>
+  <binding name="CreateMeteringPointBinding"
+           type="ws:CreateMeteringPointPortType">
+    <soap:binding style="document"
+                  transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="CreateMeteringPointRequest">
+      <soap:operation soapAction="urn:CreateMeteringPointRequest"
+                      style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOAPFault">
+        <soap:fault name="SOAPFault" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="CreateMeteringPoint">
+    <port name="CreateMeteringPointPort"
+          binding="ws:CreateMeteringPointBinding">
+      <soap:address
+        location="http://localhost:9000/b2b/synchroon/ResponderCreateMeteringPointRespondingActivity"/>
+    </port>
+  </service>
+</definitions>

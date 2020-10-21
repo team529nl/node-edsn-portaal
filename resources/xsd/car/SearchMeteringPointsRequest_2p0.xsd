@@ -1,0 +1,1331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== SearchMeteringPointsRequestEnvelope XML Schema File ===== -->
+<!-- ================================================================== -->
+<!--
+   Schema agency: cmf 
+   Schema version: 2.0.0
+   Schema date: 16 February 2015
+
+   Copyright (C) cmf (2015). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and cmf DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<xsd:schema version="2p0" xmlns:ccma="urn:cmf:edsn:data:searchmeteringpointsrequest:2:standard" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:ccts="urn:un:unece:uncefact:documentation:common:3:standard:CoreComponentsTechnicalSpecification:3" targetNamespace="urn:cmf:edsn:data:searchmeteringpointsrequest:2:standard" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- ================================================================== -->
+<!-- ===== Element Declarations ===== -->
+<!-- ================================================================== -->
+<!-- ===== Root element ===== -->
+<!-- ================================================================== -->
+<xsd:element name="SearchMeteringPointsRequestEnvelope" type="ccma:SearchMeteringPointsRequestEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#SearchMeteringPointsRequestEnvelope</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>SearchMeteringPointsRequestEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!-- ================================================================== -->
+<!-- ===== Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#SearchMeteringPointsRequestEnvelope</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>SearchMeteringPointsRequestEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EDSNBusinessDocumentHeader"  type="ccma:SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CAR_Content"  type="ccma:SearchMeteringPointsRequestEnvelope_CC" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#CAR_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#CAR_Content</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>CAR_Content</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Inhoud C-AR-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_CC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_CC" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#CAR_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#CAR_Content</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>CAR_Content</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Inhoud C-AR-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="CAR_MeteringPoint"  type="ccma:SearchMeteringPointsRequestEnvelope_CC_CMP" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#CAR_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#CAR_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>CAR_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_CC_CMP ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_CC_CMP" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#CAR_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#CAR_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>CAR_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EANID" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#CAR_MeteringPoint.EANID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>CAR_MeteringPoint.EANID</ccts:DictionaryEntryName>
+<ccts:Definition>Uniek identificatienummer conform de Europese Artikel Nummering voor de aansluiting (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting EAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="GridArea" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_GSRNEANCode" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#CAR_MeteringPoint.GridArea">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#CAR_MeteringPoint.GridArea</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>CAR_MeteringPoint.GridArea</ccts:DictionaryEntryName>
+<ccts:Definition>Netgebied/GOS. (LDT)</ccts:Definition>
+<ccts:BusinessTermName>Netgebied/GOS</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EDSN_AddressExtended" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Address" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#CAR_MeteringPoint.EDSN_AddressExtended">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#CAR_MeteringPoint.EDSN_AddressExtended</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>CAR_MeteringPoint.EDSN_AddressExtended</ccts:DictionaryEntryName>
+<ccts:Definition>BAG, straatnaam, huisnummer, huisnummer-toevoeging, postcode, woonplaats, land, TNT perceelnummer, geografische coördinaten (CDT).</ccts:Definition>
+<ccts:BusinessTermName>Leveringsadres uitgebreid</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MarketSegment" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_MarketSegmentType" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#CAR_MeteringPoint.MarketSegment">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#CAR_MeteringPoint.MarketSegment</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>CAR_MeteringPoint.MarketSegment</ccts:DictionaryEntryName>
+<ccts:Definition>Verbruikssegment: ART, GVB, KVB (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Verbruiksegment</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="LocationDescription" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_LocationDescriptionType" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#CAR_MeteringPoint.LocationDescription">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#CAR_MeteringPoint.LocationDescription</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>CAR_MeteringPoint.LocationDescription</ccts:DictionaryEntryName>
+<ccts:Definition>Leveringsadres-locatieomschrijving. (LDT)</ccts:Definition>
+<ccts:BusinessTermName>Locatieomschrijving</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProductType" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_EnergyProductType" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#CAR_MeteringPoint.ProductType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#CAR_MeteringPoint.ProductType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>CAR_MeteringPoint.ProductType</ccts:DictionaryEntryName>
+<ccts:Definition>Type van de aansluiting: Electriciteit, Gas of Water. (LDT)</ccts:Definition>
+<ccts:BusinessTermName>Productsoort</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Result" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_CC_CMP_RES" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#Result">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Result</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Result</ccts:DictionaryEntryName>
+<ccts:Definition>Resultaat.</ccts:Definition>
+<ccts:BusinessTermName>Resultaat</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="GridOperator_Company"  type="ccma:SearchMeteringPointsRequestEnvelope_CC_CMP_GOC" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#GridOperator_Company</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MPCommercialCharacteristics" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_CC_CMP_MPCC" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële eigenschappen aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MPPhysicalCharacteristics" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_CC_CMP_MPPC" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#MPPhysicalCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MPPhysicalCharacteristics</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Fysieke eigenschappen van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Fysieke eigenschappen aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_CC_CMP_GOC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_CC_CMP_GOC" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#GridOperator_Company</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:SearchMeteringPointsRequestEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#GridOperator_Company.ID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_CC_CMP_MPCC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_CC_CMP_MPCC" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële eigenschappen aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="DeterminationComplex" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_YesNoNaType" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#MPCommercialCharacteristics.DeterminationComplex">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MPCommercialCharacteristics.DeterminationComplex</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics.DeterminationComplex</ccts:DictionaryEntryName>
+<ccts:Definition>Indicatie van complexbepaling Ja of Nee (LDT)</ccts:Definition>
+<ccts:BusinessTermName>Complexbepaling</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Residential" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_YesNoNaType" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#MPCommercialCharacteristics.Residential">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MPCommercialCharacteristics.Residential</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics.Residential</ccts:DictionaryEntryName>
+<ccts:Definition>Verblijfsfunctie indicatie. Ja, nee of n.v.t. (LDT)</ccts:Definition>
+<ccts:BusinessTermName>Verblijfsfunctie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_CC_CMP_MPPC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_CC_CMP_MPPC" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#MPPhysicalCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MPPhysicalCharacteristics</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Fysieke eigenschappen van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Fysieke eigenschappen aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Appliance" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_IndicationType" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#MPPhysicalCharacteristics.Appliance">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MPPhysicalCharacteristics.Appliance</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.Appliance</ccts:DictionaryEntryName>
+<ccts:Definition>Gebruik aansluiting (LDT)</ccts:Definition>
+<ccts:BusinessTermName>Gebruik aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EnergyDeliveryStatus" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_EnergyDeliveryStatusType" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#MPPhysicalCharacteristics.EnergyDeliveryStatus">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MPPhysicalCharacteristics.EnergyDeliveryStatus</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EnergyDeliveryStatus</ccts:DictionaryEntryName>
+<ccts:Definition>Leveringstatus actief of niet actief (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Leveringstatus</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="PhysicalStatus" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_EnergyConnectionPhysicalStatusType" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#MPPhysicalCharacteristics.PhysicalStatus">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MPPhysicalCharacteristics.PhysicalStatus</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.PhysicalStatus</ccts:DictionaryEntryName>
+<ccts:Definition>Fysieke status van de aansluiting: In aanleg, in bedrijf, etc. (LDT)</ccts:Definition>
+<ccts:BusinessTermName>Fysieke status</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Subtype" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_EnergyConnectionSubtypeType" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#MPPhysicalCharacteristics.Subtype">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MPPhysicalCharacteristics.Subtype</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.Subtype</ccts:DictionaryEntryName>
+<ccts:Definition>Soort aansluiting. (LDT)</ccts:Definition>
+<ccts:BusinessTermName>Soort aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Type" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_EnergyConnectionType" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#MPPhysicalCharacteristics.Type">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MPPhysicalCharacteristics.Type</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.Type</ccts:DictionaryEntryName>
+<ccts:Definition>Type aansluiting (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Type aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_CC_CMP_RES ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_CC_CMP_RES" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#Result">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Result</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Result</ccts:DictionaryEntryName>
+<ccts:Definition>Resultaat.</ccts:Definition>
+<ccts:BusinessTermName>Resultaat</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ResultSet"  type="ccma:SearchMeteringPointsRequestEnvelope_Amount" sawsdl:modelReference="urn:cmf:edsn:lom:car:model:5:standard#Result.ResultSet">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Result.ResultSet</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Result.ResultSet</ccts:DictionaryEntryName>
+<ccts:Definition>Resultaat set (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Resultaatset</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ContentHash" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader.ContentHash</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ContentHash</ccts:DictionaryEntryName>
+<ccts:Definition>Hash calculation based on business document</ccts:Definition>
+<ccts:BusinessTermName>Hash-code berekening</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ConversationID" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader.ConversationID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ConversationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify all document instances related to a specific business process resulting from an initial service request</ccts:Definition>
+<ccts:BusinessTermName>Conversatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CorrelationID" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader.CorrelationID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CorrelationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the document instances related to a specific asynchronous process</ccts:Definition>
+<ccts:BusinessTermName>Correlatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CreationTimestamp"  type="ccma:SearchMeteringPointsRequestEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader.CreationTimestamp</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CreationTimestamp</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp when document was created</ccts:Definition>
+<ccts:BusinessTermName>Creatie datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="DocumentID" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader.DocumentID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.DocumentID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to uniquely identify the business document on a functional level</ccts:Definition>
+<ccts:BusinessTermName>Document ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ExpiresAt" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader.ExpiresAt</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ExpiresAt</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp indication the expiration of this request</ccts:Definition>
+<ccts:BusinessTermName>Uiterste geldigheidsdatum</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MessageID"  type="ccma:SearchMeteringPointsRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader.MessageID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.MessageID</ccts:DictionaryEntryName>
+<ccts:Definition>UUID voor het uniek identificeren van elke business document instantie. De UUID wordt uitgegeven door de infrastructuur.
+Deze identifier is verplicht.</ccts:Definition>
+<ccts:BusinessTermName>Bericht ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProcessTypeID" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader.ProcessTypeID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ProcessTypeID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the process type where a document instance belongs to</ccts:Definition>
+<ccts:BusinessTermName>Procestype ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="RepeatedRequest" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader.RepeatedRequest</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.RepeatedRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Correlates message or service with all other messages and service calls related to the same business process</ccts:Definition>
+<ccts:BusinessTermName>Herhaling aanvraag</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TestRequest" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EDSNBusinessDocumentHeader.TestRequest</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.TestRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Indicates if this is a test request</ccts:Definition>
+<ccts:BusinessTermName>Testdocument</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Destination"  type="ccma:SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Destination</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Manifest" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Manifest</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Source"  type="ccma:SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Source</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Destination ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Destination</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Receiver"  type="ccma:SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Receiver</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Service" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Service</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Receiver</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Receiver.Authority</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the receiving party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Receiver.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol ontvangende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ReceiverID"  type="ccma:SearchMeteringPointsRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Receiver.ReceiverID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ReceiverID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Service ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Service</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ServiceMethod" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Service.ServiceMethod</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Identifies a process within the service that processes on the business document</ccts:Definition>
+<ccts:BusinessTermName>Functionaliteit van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ServiceName" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Service.ServiceName</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceName</ccts:DictionaryEntryName>
+<ccts:Definition>Sender description of service to be carried out on the business document</ccts:Definition>
+<ccts:BusinessTermName>Naam van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Manifest ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Manifest</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="NumberofItems"  type="ccma:SearchMeteringPointsRequestEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Manifest.NumberofItems</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest.NumberofItems</ccts:DictionaryEntryName>
+<ccts:Definition>Number of associated items</ccts:Definition>
+<ccts:BusinessTermName>Aantal gerelateerde items</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ManifestItem" minOccurs="1" maxOccurs="unbounded" type="ccma:SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Description" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#ManifestItem.Description</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.Description</ccts:DictionaryEntryName>
+<ccts:Definition>Text description of the item</ccts:Definition>
+<ccts:BusinessTermName>Omschrijving</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="LanguageCode" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#ManifestItem.LanguageCode</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.LanguageCode</ccts:DictionaryEntryName>
+<ccts:Definition>ISO 639 language code of the item</ccts:Definition>
+<ccts:BusinessTermName>Taal-code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MimeTypeQualifierCode"  type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#ManifestItem.MimeTypeQualifierCode</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.MimeTypeQualifierCode</ccts:DictionaryEntryName>
+<ccts:Definition>MIME Media Types Code describing the content of the item</ccts:Definition>
+<ccts:BusinessTermName>MIME Media Type code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="UniformResourceIdentifier"  type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#ManifestItem.UniformResourceIdentifier</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.UniformResourceIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>URI of the item
+Identifier voor locatie en naam van een attachment</ccts:Definition>
+<ccts:BusinessTermName>URI</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Source ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Source</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Source.Authority</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the sending party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Source.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol zendende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SenderID"  type="ccma:SearchMeteringPointsRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Source.SenderID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.SenderID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Business Data Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Address ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_Address" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Address</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Address</ccts:DictionaryEntryName>
+<ccts:Definition>Datatype voor adres met alle velden.</ccts:Definition>
+<ccts:BusinessTermName>Adres</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="BAG" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_BAGType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.BAG">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Address.BAG</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.BAG</ccts:DictionaryEntryName>
+<ccts:Definition>BAG (Basisregistraties Adressen en Gebouwen) identificatie (CDT)</ccts:Definition>
+<ccts:BusinessTermName>Basisregistraties Adressen en Gebouwen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="StreetName" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_AddressText" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.StreetName">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Address.StreetName</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.StreetName</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst string straatnaam</ccts:Definition>
+<ccts:BusinessTermName>Straatnaam</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="BuildingNr" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_BuildingNumber" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.BuildingNr">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Address.BuildingNr</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.BuildingNr</ccts:DictionaryEntryName>
+<ccts:Definition>Cijfer(s) (integer) huisnummer</ccts:Definition>
+<ccts:BusinessTermName>Huisnummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ExBuildingNr" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_ExBuildingNr" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.ExBuildingNr">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Address.ExBuildingNr</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.ExBuildingNr</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst string huisnummertoevoeging</ccts:Definition>
+<ccts:BusinessTermName>Huisnummertoevoeging</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ZIPCode" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_ZIPCode" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.ZIPCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Address.ZIPCode</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.ZIPCode</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst string postcode</ccts:Definition>
+<ccts:BusinessTermName>Postcode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CityName" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_AddressText" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.CityName">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Address.CityName</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.CityName</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst string woonplaats</ccts:Definition>
+<ccts:BusinessTermName>Woonplaats</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Country" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_CountryCode" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.Country">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Address.Country</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.Country</ccts:DictionaryEntryName>
+<ccts:Definition>Landcode, twee karakters</ccts:Definition>
+<ccts:BusinessTermName>Landcode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EDSN_GeographicalCoordinate" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_GeographicalCoordinate" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.EDSN_GeographicalCoordinate">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Address.EDSN_GeographicalCoordinate</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.EDSN_GeographicalCoordinate</ccts:DictionaryEntryName>
+<ccts:Definition>Complex data type met de GPS-coördinaten voor de noorderbreedte en oosterlengte</ccts:Definition>
+<ccts:BusinessTermName>GPS-coördinaten</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TNTID" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_TNTIDType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.TNTID">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Address.TNTID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.TNTID</ccts:DictionaryEntryName>
+<ccts:Definition>TNT perceelnummer</ccts:Definition>
+<ccts:BusinessTermName>TNT perceelnummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: AddressText ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_AddressText">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#AddressText</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>AddressText</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst string voor complex datatype Adres.</ccts:Definition>
+<ccts:BusinessTermName>Adres</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="24"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Amount ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_Amount">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Amount</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Amount</ccts:DictionaryEntryName>
+<ccts:Definition>Hoeveelheid (integer).</ccts:Definition>
+<ccts:BusinessTermName>Hoeveelheid</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:integer">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: BAGIDType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_BAGIDType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#BAGIDType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BAGIDType</ccts:DictionaryEntryName>
+<ccts:Definition>Uniek objectaanduiding binnen een gemeente, bestaande uit 16 cijfers.</ccts:Definition>
+<ccts:BusinessTermName>Objectnummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="16"/>
+<xsd:minLength value="1"/>
+<xsd:pattern value="[0-9]*"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: BAGType ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_BAGType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#BAGType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#BAGType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BAGType</ccts:DictionaryEntryName>
+<ccts:Definition>BAG (Basisregistraties Adressen en Gebouwen). De BAG-identifier is verplicht. De BAG-identifier Verblijfsobject is een adresseerbaar object met een relatie tot een Pand. Pand-identifier is derhalve een optioneel attribuut.</ccts:Definition>
+<ccts:BusinessTermName>BAG</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="BAGID"  type="ccma:SearchMeteringPointsRequestEnvelope_BAGIDType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#BAGType.BAGID">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#BAGType.BAGID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BAGType.BAGID</ccts:DictionaryEntryName>
+<ccts:Definition>BAG-identifier voor de drie adresseerbare objecttypen: Verblijfsobjecten, Ligplaatsen en Standplaatsen.</ccts:Definition>
+<ccts:BusinessTermName>BAG-identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="BAGBuildingID" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_BAGIDType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#BAGType.BAGBuildingID">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#BAGType.BAGBuildingID</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BAGType.BAGBuildingID</ccts:DictionaryEntryName>
+<ccts:Definition>BAG-identifier voor Pand.</ccts:Definition>
+<ccts:BusinessTermName>BAGPand-identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: BuildingNumber ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_BuildingNumber">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#BuildingNumber</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BuildingNumber</ccts:DictionaryEntryName>
+<ccts:Definition>Huisnummer voor complex datatype Adres.</ccts:Definition>
+<ccts:BusinessTermName>Huisnummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:integer">
+<xsd:maxInclusive value="99999"/>
+<xsd:minInclusive value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: CountryCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_CountryCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#CountryCode</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>CountryCode</ccts:DictionaryEntryName>
+<ccts:Definition>Landcode.</ccts:Definition>
+<ccts:BusinessTermName>Landcode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="2"/>
+<xsd:minLength value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: DateTime ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#DateTime</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>DateTime</ccts:DictionaryEntryName>
+<ccts:Definition>Datum/tijd (dateTime).</ccts:Definition>
+<ccts:BusinessTermName>Datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:dateTime"/>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyConnectionPhysicalStatusType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_EnergyConnectionPhysicalStatusType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EnergyConnectionPhysicalStatusType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyConnectionPhysicalStatusType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals geïdentificeerd door de participerende NB&apos;s. Indien geen waarde is opgegeven door de NB wordt default automatisch &lt;i&gt;In aanleg&lt;/i&gt; gebruikt.</ccts:Definition>
+<ccts:BusinessTermName>Code fysieke status</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyConnectionSubtypeType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_EnergyConnectionSubtypeType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EnergyConnectionSubtypeType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyConnectionSubtypeType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals momenteel in gebruik door het switchsysteem (verwerken PV-switch). Indien geen waarde is opgegeven door de NB wordt default automatisch &lt;i&gt;Gewoon&lt;/i&gt; gebruikt (voor NRM-aansluiting).</ccts:Definition>
+<ccts:BusinessTermName>Code soort aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyConnectionType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_EnergyConnectionType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EnergyConnectionType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyConnectionType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals geïdentificeerd door de participerende NB&apos;s. Geen default: waarde moet expliciet opgegeven worden door de NB.</ccts:Definition>
+<ccts:BusinessTermName>Code type aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyDeliveryStatusType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_EnergyDeliveryStatusType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EnergyDeliveryStatusType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyDeliveryStatusType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals geïdentificeerd door de participerende NB&apos;s. Indien geen fysieke status is opgegeven door de NB wordt default automatisch &lt;i&gt;Inactief&lt;/i&gt; gebruikt.</ccts:Definition>
+<ccts:BusinessTermName>Code leveringstatus</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyProductType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_EnergyProductType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#EnergyProductType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyProductType</ccts:DictionaryEntryName>
+<ccts:Definition>Code producttype.</ccts:Definition>
+<ccts:BusinessTermName>Code producttype</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ExBuildingNr ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_ExBuildingNr">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#ExBuildingNr</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ExBuildingNr</ccts:DictionaryEntryName>
+<ccts:Definition>Huisnummertoevoeging voor complex datatype Adres.</ccts:Definition>
+<ccts:BusinessTermName>Huisnummertoevoeging</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="6"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GeoCoordinateMeasureType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_GeoCoordinateMeasureType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#GeoCoordinateMeasureType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GeoCoordinateMeasureType</ccts:DictionaryEntryName>
+<ccts:Definition>Geografische coördinaat type (LDT)</ccts:Definition>
+<ccts:BusinessTermName>Geografische coördinaat</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:decimal">
+<xsd:fractionDigits value="5"/>
+<xsd:maxInclusive value="99.99999"/>
+<xsd:minExclusive value="00.00001"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GeographicalCoordinate ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="SearchMeteringPointsRequestEnvelope_GeographicalCoordinate" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#GeographicalCoordinate">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#GeographicalCoordinate</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GeographicalCoordinate</ccts:DictionaryEntryName>
+<ccts:Definition>De GPS-coördinaten van de positie van deze aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>GPS-coördinaten</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Latitude" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_GeoCoordinateMeasureType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#GeographicalCoordinate.Latitude">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#GeographicalCoordinate.Latitude</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GeographicalCoordinate.Latitude</ccts:DictionaryEntryName>
+<ccts:Definition>De GPS noorderbreedte-coördinaten van de positie van deze aansluiting</ccts:Definition>
+<ccts:BusinessTermName>GPS/N-coördinaten</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Longitude" minOccurs="0" maxOccurs="1" type="ccma:SearchMeteringPointsRequestEnvelope_GeoCoordinateMeasureType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#GeographicalCoordinate.Longitude">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#GeographicalCoordinate.Longitude</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GeographicalCoordinate.Longitude</ccts:DictionaryEntryName>
+<ccts:Definition>De GPS oosterlengte-coördinaten van de positie van deze aansluiting</ccts:Definition>
+<ccts:BusinessTermName>GPS/O-coördinaten</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GLNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#GLNEANCode</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GLNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Location Number (GLN) conform de Europese Artikel Nummering.</ccts:Definition>
+<ccts:BusinessTermName>Global Location Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="13"/>
+<xsd:pattern value="[0-9]{13}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GSRNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#GSRNEANCode</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GSRNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Service Relation Number (GSRN) conform de Europese Artikel Nummering.</ccts:Definition>
+<ccts:BusinessTermName>Global Service Relation Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="18"/>
+<xsd:pattern value="[0-9]{18}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Identifier ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Identifier</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Identifier</ccts:DictionaryEntryName>
+<ccts:Definition>Identifier (string).</ccts:Definition>
+<ccts:BusinessTermName>Identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: IndicationType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_IndicationType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#IndicationType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>IndicationType</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst indicatie type</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="30"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Indicator ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Indicator</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Indicator</ccts:DictionaryEntryName>
+<ccts:Definition>Indicator (string).</ccts:Definition>
+<ccts:BusinessTermName>Indicator</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: LocationDescriptionType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_LocationDescriptionType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#LocationDescriptionType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>LocationDescriptionType</ccts:DictionaryEntryName>
+<ccts:Definition>Omschrijving locatie aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Leveringsadres-locatieomschrijving</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="35"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MarketSegmentType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_MarketSegmentType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#MarketSegmentType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MarketSegmentType</ccts:DictionaryEntryName>
+<ccts:Definition>De bestaande verbruiksegmenten in de (vrije) energiemarkt. Geen default: waarde moet expliciet opgegeven worden door de NB.</ccts:Definition>
+<ccts:BusinessTermName>Code verbruikssegment</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Numeric ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Numeric</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Numeric</ccts:DictionaryEntryName>
+<ccts:Definition>Nummer (getal).</ccts:Definition>
+<ccts:BusinessTermName>Nummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:decimal">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Text ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#Text</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Text</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst (string).</ccts:Definition>
+<ccts:BusinessTermName>Tekst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: TNTIDType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_TNTIDType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#TNTIDType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>TNTIDType</ccts:DictionaryEntryName>
+<ccts:Definition>[A.12] TNT perceelnummer.</ccts:Definition>
+<ccts:BusinessTermName>TNT perceelnummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="9"/>
+<xsd:minLength value="1"/>
+<xsd:pattern value="[0-9]*"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: YesNoNaType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_YesNoNaType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#YesNoNaType</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>YesNoNaType</ccts:DictionaryEntryName>
+<ccts:Definition>Code ja, nee of nvt.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="3"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ZIPCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="SearchMeteringPointsRequestEnvelope_ZIPCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:cmf:edsn:data:searchmeteringpointsrequest#ZIPCode</ccts:UniqueID>
+<ccts:VersionID>2.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ZIPCode</ccts:DictionaryEntryName>
+<ccts:Definition>Postcode voor complex datatype Adres.</ccts:Definition>
+<ccts:BusinessTermName>Postcode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="6"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Business Code List Definitions ===== -->
+<!-- ================================================================== -->
+</xsd:schema>

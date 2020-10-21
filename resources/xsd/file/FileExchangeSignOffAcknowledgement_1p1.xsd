@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== FileExchangeSignOffAcknowledgementEnvelope XML Schema File ===== -->
+<!-- ================================================================== -->
+<!--
+   Schema agency: nedu 
+   Schema version: 1.1.0
+   Schema date: 25 September 2012
+
+   Copyright (C) nedu (2012). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and nedu DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<xsd:schema version="1p1" xmlns:ccma="urn:nedu:edsn:data:fileexchangesignoffacknowledgement:1:standard" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:ccts="urn:un:unece:uncefact:documentation:common:3:standard:CoreComponentsTechnicalSpecification:3" targetNamespace="urn:nedu:edsn:data:fileexchangesignoffacknowledgement:1:standard" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- ================================================================== -->
+<!-- ===== Element Declarations ===== -->
+<!-- ================================================================== -->
+<!-- ===== Root element ===== -->
+<!-- ================================================================== -->
+<xsd:element name="FileExchangeSignOffAcknowledgementEnvelope" type="ccma:FileExchangeSignOffAcknowledgementEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#FileExchangeSignOffAcknowledgementEnvelope</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>FileExchangeSignOffAcknowledgementEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!-- ================================================================== -->
+<!-- ===== Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: FileExchangeSignOffAcknowledgementEnvelope ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="FileExchangeSignOffAcknowledgementEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#FileExchangeSignOffAcknowledgementEnvelope</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>FileExchangeSignOffAcknowledgementEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EDSNBusinessDocumentHeader"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Content"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_PC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ContentHash" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader.ContentHash</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ContentHash</ccts:DictionaryEntryName>
+<ccts:Definition>Hash calculation based on business document</ccts:Definition>
+<ccts:BusinessTermName>Hash-code berekening</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ConversationID" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader.ConversationID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ConversationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify all document instances related to a specific business process resulting from an initial service request</ccts:Definition>
+<ccts:BusinessTermName>Conversatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CorrelationID" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader.CorrelationID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CorrelationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the document instances related to a specific asynchronous process</ccts:Definition>
+<ccts:BusinessTermName>Correlatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CreationTimestamp"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader.CreationTimestamp</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CreationTimestamp</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp when document was created</ccts:Definition>
+<ccts:BusinessTermName>Creatie datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="DocumentID" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader.DocumentID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.DocumentID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to uniquely identify the business document on a functional level</ccts:Definition>
+<ccts:BusinessTermName>Document ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ExpiresAt" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader.ExpiresAt</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ExpiresAt</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp indication the expiration of this request</ccts:Definition>
+<ccts:BusinessTermName>Uiterste geldigheidsdatum</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MessageID"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader.MessageID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.MessageID</ccts:DictionaryEntryName>
+<ccts:Definition>UUID voor het uniek identificeren van elke business document instantie. De UUID wordt uitgegeven door de infrastructuur.
+Deze identifier is verplicht.</ccts:Definition>
+<ccts:BusinessTermName>Bericht ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProcessTypeID" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader.ProcessTypeID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ProcessTypeID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the process type where a document instance belongs to</ccts:Definition>
+<ccts:BusinessTermName>Procestype ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="RepeatedRequest" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader.RepeatedRequest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.RepeatedRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Correlates message or service with all other messages and service calls related to the same business process</ccts:Definition>
+<ccts:BusinessTermName>Herhaling aanvraag</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TestRequest" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#EDSNBusinessDocumentHeader.TestRequest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.TestRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Indicates if this is a test request</ccts:Definition>
+<ccts:BusinessTermName>Testdocument</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Destination"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Destination</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Manifest" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Manifest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Source"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Source</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Destination ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Destination</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Receiver"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Receiver</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Service" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Service</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Receiver</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Receiver.Authority</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the receiving party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Receiver.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol ontvangende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ReceiverID"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Receiver.ReceiverID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ReceiverID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Destination_Service ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Service</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ServiceMethod" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Service.ServiceMethod</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Identifies a process within the service that processes on the business document</ccts:Definition>
+<ccts:BusinessTermName>Functionaliteit van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ServiceName" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Service.ServiceName</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceName</ccts:DictionaryEntryName>
+<ccts:Definition>Sender description of service to be carried out on the business document</ccts:Definition>
+<ccts:BusinessTermName>Naam van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Manifest ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Manifest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="NumberofItems"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Manifest.NumberofItems</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest.NumberofItems</ccts:DictionaryEntryName>
+<ccts:Definition>Number of associated items</ccts:Definition>
+<ccts:BusinessTermName>Aantal gerelateerde items</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ManifestItem" minOccurs="1" maxOccurs="unbounded" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Description" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#ManifestItem.Description</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.Description</ccts:DictionaryEntryName>
+<ccts:Definition>Text description of the item</ccts:Definition>
+<ccts:BusinessTermName>Omschrijving</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="LanguageCode" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#ManifestItem.LanguageCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.LanguageCode</ccts:DictionaryEntryName>
+<ccts:Definition>ISO 639 language code of the item</ccts:Definition>
+<ccts:BusinessTermName>Taal-code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MimeTypeQualifierCode"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#ManifestItem.MimeTypeQualifierCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.MimeTypeQualifierCode</ccts:DictionaryEntryName>
+<ccts:Definition>MIME Media Types Code describing the content of the item</ccts:Definition>
+<ccts:BusinessTermName>MIME Media Type code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="UniformResourceIdentifier"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#ManifestItem.UniformResourceIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.UniformResourceIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>URI of the item
+Identifier voor locatie en naam van een attachment</ccts:Definition>
+<ccts:BusinessTermName>URI</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Source ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="FileExchangeSignOffAcknowledgementEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Source</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Source.Authority</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the sending party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Source.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol zendende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SenderID"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Source.SenderID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.SenderID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: FileExchangeSignOffAcknowledgementEnvelope_PC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="FileExchangeSignOffAcknowledgementEnvelope_PC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Portaal_Rejection" minOccurs="0" maxOccurs="1" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_PC_PR" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Rejection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Portaal_Rejection</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Rejection</ccts:DictionaryEntryName>
+<ccts:Definition>Een afwijzing op een vraag of verzoek. Portaal_Rejection (Afwijzing) heeft een relatie met MeteringPoint (Aansluiting). Bevat geen informatie over MeteringPoint.</ccts:Definition>
+<ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: FileExchangeSignOffAcknowledgementEnvelope_PC_PR ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="FileExchangeSignOffAcknowledgementEnvelope_PC_PR" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Rejection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Portaal_Rejection</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Rejection</ccts:DictionaryEntryName>
+<ccts:Definition>Een afwijzing op een vraag of verzoek. Portaal_Rejection (Afwijzing) heeft een relatie met MeteringPoint (Aansluiting). Bevat geen informatie over MeteringPoint.</ccts:Definition>
+<ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Rejection" minOccurs="1" maxOccurs="unbounded" type="ccma:FileExchangeSignOffAcknowledgementEnvelope_RejectionPortaalType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Rejection.Rejection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Portaal_Rejection.Rejection</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Rejection.Rejection</ccts:DictionaryEntryName>
+<ccts:Definition>Een afwijzing op een vraag of verzoek (CDT).</ccts:Definition>
+<ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Business Data Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: DateTime ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="FileExchangeSignOffAcknowledgementEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#DateTime</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>DateTime</ccts:DictionaryEntryName>
+<ccts:Definition>Datum/tijd (dateTime).</ccts:Definition>
+<ccts:BusinessTermName>Datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:dateTime"/>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Identifier ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="FileExchangeSignOffAcknowledgementEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Identifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Identifier</ccts:DictionaryEntryName>
+<ccts:Definition>Identifier (string).</ccts:Definition>
+<ccts:BusinessTermName>Identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Indicator ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="FileExchangeSignOffAcknowledgementEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Indicator</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Indicator</ccts:DictionaryEntryName>
+<ccts:Definition>Indicator (string).</ccts:Definition>
+<ccts:BusinessTermName>Indicator</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Numeric ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="FileExchangeSignOffAcknowledgementEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Numeric</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Numeric</ccts:DictionaryEntryName>
+<ccts:Definition>Nummer (getal).</ccts:Definition>
+<ccts:BusinessTermName>Nummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:decimal">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: RejectionPortaalType ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="FileExchangeSignOffAcknowledgementEnvelope_RejectionPortaalType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#RejectionPortaalType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionPortaalType</ccts:DictionaryEntryName>
+<ccts:Definition>Datatype voor inhoudelijke afwijzingen.</ccts:Definition>
+<ccts:BusinessTermName>Afwijzingen portaal</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="RejectionCode"  type="ccma:FileExchangeSignOffAcknowledgementEnvelope_RejectionReasonPortaalCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#RejectionPortaalType.RejectionCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionPortaalType.RejectionCode</ccts:DictionaryEntryName>
+<ccts:Definition>Code van de reden van de afwijzing.</ccts:Definition>
+<ccts:BusinessTermName>Code afwijsreden</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="RejectionText" minOccurs="0" maxOccurs="1" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#RejectionPortaalType.RejectionText</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionPortaalType.RejectionText</ccts:DictionaryEntryName>
+<ccts:Definition>Toelichting op de reden van afwijzing.</ccts:Definition>
+<ccts:BusinessTermName>Toelichting afwijsreden</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Text ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="FileExchangeSignOffAcknowledgementEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#Text</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Text</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst (string).</ccts:Definition>
+<ccts:BusinessTermName>Tekst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Business Code List Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: RejectionReasonPortaalCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="FileExchangeSignOffAcknowledgementEnvelope_RejectionReasonPortaalCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:fileexchangesignoffacknowledgement#RejectionReasonPortaalCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionReasonPortaalCode</ccts:DictionaryEntryName>
+<ccts:Definition>Code afwijsreden Portaal.</ccts:Definition>
+<ccts:BusinessTermName>Code afwijsreden Portaal</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="200">
+<xsd:annotation>
+<xsd:documentation>Aanvraag/melding onvolledig of syntactisch onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="201">
+<xsd:annotation>
+<xsd:documentation>EAN-code aansluiting onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="202">
+<xsd:annotation>
+<xsd:documentation> EAN-code opvragende partij onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="203">
+<xsd:annotation>
+<xsd:documentation>EAN-code aansluiting onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="204">
+<xsd:annotation>
+<xsd:documentation>EAN-code leverancier onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="205">
+<xsd:annotation>
+<xsd:documentation>EAN-code MV onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="207">
+<xsd:annotation>
+<xsd:documentation>EAN-code PV onbekend</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="208">
+<xsd:annotation>
+<xsd:documentation>Geblokkeerd voor automatische mutaties.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="209">
+<xsd:annotation>
+<xsd:documentation>Geen geldige (combinatie van) zoekcriteria.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="210">
+<xsd:annotation>
+<xsd:documentation>Indientermijn onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="213">
+<xsd:annotation>
+<xsd:documentation>Niet afgeschakeld of geen schakelopdracht &apos;uit&apos; ontvangen.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="214">
+<xsd:annotation>
+<xsd:documentation>Ontvanger onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="215">
+<xsd:annotation>
+<xsd:documentation>Transactiedossier onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="216">
+<xsd:annotation>
+<xsd:documentation>Transactiedossiernummer onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="217">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling bedrag Ex BTW Hoog onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="218">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling BTW bedrag Hoog onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="219">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling bedrag Ex BTW Laag onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="220">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling BTW bedrag Laag onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="221">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling bedrag Ex BTW Nul onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="222">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling BTW bedrag Nul onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="223">
+<xsd:annotation>
+<xsd:documentation>BTW percentage onjuist toegepast.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="224">
+<xsd:annotation>
+<xsd:documentation>Totaal generaal onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="225">
+<xsd:annotation>
+<xsd:documentation>Onjuiste aanbiedingsdatum.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="226">
+<xsd:annotation>
+<xsd:documentation>Over de betreffende periode en BTW nummer is al een aanvullende afdrachtspecificatie ontvangen.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="227">
+<xsd:annotation>
+<xsd:documentation>Kruisend bericht</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="228">
+<xsd:annotation>
+<xsd:documentation>Transactiedossierstap onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="229">
+<xsd:annotation>
+<xsd:documentation>Achternaam ontbreekt en geen leverancier in AR op mutatiedatum.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="230">
+<xsd:annotation>
+<xsd:documentation>EAN-code netbeheerder onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="231">
+<xsd:annotation>
+<xsd:documentation>Vastgestelde meetdata is te oud.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="232">
+<xsd:annotation>
+<xsd:documentation>Oplevering dispuut- of niet-event standen niet mogelijk voor GV.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="234">
+<xsd:annotation>
+<xsd:documentation>Aansluiting niet voorzien van meetinrichting.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="235">
+<xsd:annotation>
+<xsd:documentation>Aantal meterstanden ongelijk aantal actieve telwerken.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="236">
+<xsd:annotation>
+<xsd:documentation>Aantal posities in meterstanden ongelijk aan aantal posities telwerken.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="237">
+<xsd:annotation>
+<xsd:documentation>Leverancier is niet de actuele leverancier.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="238">
+<xsd:annotation>
+<xsd:documentation>Stand ligt voor reeds vastgestelde stand.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="239">
+<xsd:annotation>
+<xsd:documentation>Leverancier is niet de initiator van het event.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="240">
+<xsd:annotation>
+<xsd:documentation>Geen event bekend op opnamedatum.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="241">
+<xsd:annotation>
+<xsd:documentation>Geen historische meetdata beschikbaar.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="242">
+<xsd:annotation>
+<xsd:documentation>Opvraag betreft een KV-aansluiting.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="243">
+<xsd:annotation>
+<xsd:documentation>Zender onbekend
+</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="244">
+<xsd:annotation>
+<xsd:documentation>Soort bestand onbekend
+</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="245">
+<xsd:annotation>
+<xsd:documentation>(Deel)bestand ontbreekt
+</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="246">
+<xsd:annotation>
+<xsd:documentation>Deelbestand incorrect
+</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="247">
+<xsd:annotation>
+<xsd:documentation>Bestand onbekend
+</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="248">
+<xsd:annotation>
+<xsd:documentation>Geadresseerde van afmelding/afwijzing is niet gelijk aan afzender van het bestand
+</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="249">
+<xsd:annotation>
+<xsd:documentation>Afzender van afmelding/afwijzing is niet gelijk aan geadresseerde van het bestand
+</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>

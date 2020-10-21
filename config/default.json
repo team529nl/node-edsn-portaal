@@ -1,0 +1,22 @@
+{
+  "Client": {
+    "sender": "[EAN13 of party organization if orgamization, else EAN13 of supplier]",
+    "levEAN": "[EAN13 of supplier]",
+    "privateKey": "/path/to/private.key",
+    "publicCert": "/path/to/public.pem"
+  },
+  "Soap": {
+    "endpointBase": "https://portaal-opt.edsn.nl"
+  },
+  "Test": {
+    "certsDir": "/path/to/keys/dir",
+    "keySuffix": ".test.fqdn.key",
+    "certSuffix": ".test.fqdn.pem"
+  },
+  "Proxy" :{
+    "host": "connect.example.com",
+    "enabled": true,
+    "key": "/path/to/shadowsocksproxy.key",
+    "username": "forward"
+  }
+}

@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== ContractDataRequestEnvelope XML Schema File ===== -->
+<!-- ================================================================== -->
+<!--
+   Schema agency: nedu 
+   Schema version: 1.1.0
+   Schema date: 18 April 2017
+
+   Copyright (C) nedu (2017). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and nedu DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<xsd:schema version="1p1" xmlns:ccma="urn:nedu:edsn:data:contractdatarequest:1:standard" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:ccts="urn:un:unece:uncefact:documentation:common:3:standard:CoreComponentsTechnicalSpecification:3" targetNamespace="urn:nedu:edsn:data:contractdatarequest:1:standard" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- ================================================================== -->
+<!-- ===== Element Declarations ===== -->
+<!-- ================================================================== -->
+<!-- ===== Root element ===== -->
+<!-- ================================================================== -->
+<xsd:element name="ContractDataRequestEnvelope" type="ccma:ContractDataRequestEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#ContractDataRequestEnvelope</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ContractDataRequestEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!-- ================================================================== -->
+<!-- ===== Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#ContractDataRequestEnvelope</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ContractDataRequestEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EDSNBusinessDocumentHeader"  type="ccma:ContractDataRequestEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Content"  type="ccma:ContractDataRequestEnvelope_PC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_EDSNBusinessDocumentHeader ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ContentHash" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader.ContentHash</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ContentHash</ccts:DictionaryEntryName>
+<ccts:Definition>Hash calculation based on business document</ccts:Definition>
+<ccts:BusinessTermName>Hash-code berekening</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ConversationID" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader.ConversationID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ConversationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify all document instances related to a specific business process resulting from an initial service request</ccts:Definition>
+<ccts:BusinessTermName>Conversatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CorrelationID" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader.CorrelationID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CorrelationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the document instances related to a specific asynchronous process</ccts:Definition>
+<ccts:BusinessTermName>Correlatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CreationTimestamp"  type="ccma:ContractDataRequestEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader.CreationTimestamp</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CreationTimestamp</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp when document was created</ccts:Definition>
+<ccts:BusinessTermName>Creatie datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="DocumentID" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader.DocumentID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.DocumentID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to uniquely identify the business document on a functional level</ccts:Definition>
+<ccts:BusinessTermName>Document ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ExpiresAt" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader.ExpiresAt</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ExpiresAt</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp indication the expiration of this request</ccts:Definition>
+<ccts:BusinessTermName>Uiterste geldigheidsdatum</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MessageID"  type="ccma:ContractDataRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader.MessageID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.MessageID</ccts:DictionaryEntryName>
+<ccts:Definition>UUID voor het uniek identificeren van elke business document instantie. De UUID wordt uitgegeven door de infrastructuur.
+Deze identifier is verplicht.</ccts:Definition>
+<ccts:BusinessTermName>Bericht ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProcessTypeID" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader.ProcessTypeID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ProcessTypeID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the process type where a document instance belongs to</ccts:Definition>
+<ccts:BusinessTermName>Procestype ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="RepeatedRequest" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader.RepeatedRequest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.RepeatedRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Correlates message or service with all other messages and service calls related to the same business process</ccts:Definition>
+<ccts:BusinessTermName>Herhaling aanvraag</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TestRequest" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#EDSNBusinessDocumentHeader.TestRequest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.TestRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Indicates if this is a test request</ccts:Definition>
+<ccts:BusinessTermName>Testdocument</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Destination"  type="ccma:ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Destination</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Manifest" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Manifest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Source"  type="ccma:ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Source</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Destination ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Destination</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Receiver"  type="ccma:ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Receiver</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Service" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Service</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Receiver</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Receiver.Authority</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the receiving party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Receiver.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol ontvangende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ReceiverID"  type="ccma:ContractDataRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Receiver.ReceiverID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ReceiverID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Service ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Service</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ServiceMethod" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Service.ServiceMethod</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Identifies a process within the service that processes on the business document</ccts:Definition>
+<ccts:BusinessTermName>Functionaliteit van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ServiceName" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Service.ServiceName</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceName</ccts:DictionaryEntryName>
+<ccts:Definition>Sender description of service to be carried out on the business document</ccts:Definition>
+<ccts:BusinessTermName>Naam van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Manifest ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Manifest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="NumberofItems"  type="ccma:ContractDataRequestEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Manifest.NumberofItems</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest.NumberofItems</ccts:DictionaryEntryName>
+<ccts:Definition>Number of associated items</ccts:Definition>
+<ccts:BusinessTermName>Aantal gerelateerde items</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ManifestItem" minOccurs="1" maxOccurs="unbounded" type="ccma:ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Description" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#ManifestItem.Description</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.Description</ccts:DictionaryEntryName>
+<ccts:Definition>Text description of the item</ccts:Definition>
+<ccts:BusinessTermName>Omschrijving</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="LanguageCode" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#ManifestItem.LanguageCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.LanguageCode</ccts:DictionaryEntryName>
+<ccts:Definition>ISO 639 language code of the item</ccts:Definition>
+<ccts:BusinessTermName>Taal-code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MimeTypeQualifierCode"  type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#ManifestItem.MimeTypeQualifierCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.MimeTypeQualifierCode</ccts:DictionaryEntryName>
+<ccts:Definition>MIME Media Types Code describing the content of the item</ccts:Definition>
+<ccts:BusinessTermName>MIME Media Type code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="UniformResourceIdentifier"  type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#ManifestItem.UniformResourceIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.UniformResourceIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>URI of the item
+Identifier voor locatie en naam van een attachment</ccts:Definition>
+<ccts:BusinessTermName>URI</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Source ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Source</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Source.Authority</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the sending party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Source.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol zendende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SenderID"  type="ccma:ContractDataRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Source.SenderID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.SenderID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_PC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_PC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Portaal_MeteringPoint"  type="ccma:ContractDataRequestEnvelope_PC_PMP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Portaal_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_PC_PMP ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_PC_PMP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Portaal_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EANID"  type="ccma:ContractDataRequestEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Portaal_MeteringPoint.EANID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.EANID</ccts:DictionaryEntryName>
+<ccts:Definition>Uniek identificatienummer conform de Europese Artikel Nummering voor de aansluiting (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting EAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MPCommercialCharacteristics" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_PC_PMP_MPCC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Mutation"  type="ccma:ContractDataRequestEnvelope_PC_PMP_PM" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Portaal_Mutation</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation</ccts:DictionaryEntryName>
+<ccts:Definition>Wijziging in een bestaande situatie. </ccts:Definition>
+<ccts:BusinessTermName>Mutatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_PC_PMP_MPCC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_PC_PMP_MPCC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="GridContractParty" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_PC_PMP_MPCC_GridContractParty" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#GridContractParty</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty</ccts:DictionaryEntryName>
+<ccts:Definition>Partij waarmee een schriftelijk vastgelegde overeenkomst bestaat. </ccts:Definition>
+<ccts:BusinessTermName>Contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_PC_PMP_MPCC_GridContractParty ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_PC_PMP_MPCC_GridContractParty" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#GridContractParty</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty</ccts:DictionaryEntryName>
+<ccts:Definition>Partij waarmee een schriftelijk vastgelegde overeenkomst bestaat. </ccts:Definition>
+<ccts:BusinessTermName>Contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="BirthDayKey" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_MonthDayType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#GridContractParty.BirthDayKey</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty.BirthDayKey</ccts:DictionaryEntryName>
+<ccts:Definition>Verjaardag sleutel voor identificatie van klant (LDT1)</ccts:Definition>
+<ccts:BusinessTermName>Verjaardag sleutel</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="IBANKey" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_IBANKeyType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#GridContractParty.IBANKey</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty.IBANKey</ccts:DictionaryEntryName>
+<ccts:Definition>IBAN sleutel voor identificatie van klant (LDT1)</ccts:Definition>
+<ccts:BusinessTermName>IBAN sleutel</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ContractDataRequestEnvelope_PC_PMP_PM ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ContractDataRequestEnvelope_PC_PMP_PM" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Portaal_Mutation</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation</ccts:DictionaryEntryName>
+<ccts:Definition>Wijziging in een bestaande situatie. </ccts:Definition>
+<ccts:BusinessTermName>Mutatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ExternalReference" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_ReferenceTextType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation.ExternalReference">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Portaal_Mutation.ExternalReference</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation.ExternalReference</ccts:DictionaryEntryName>
+<ccts:Definition>Eigen referentie van de initiërende marktpartij ter vereenvoudiging van zijn eigen interne procesgang. Max. 60 karakters (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Referentie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Initiator"  type="ccma:ContractDataRequestEnvelope_GLNEANCode" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation.Initiator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Portaal_Mutation.Initiator</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation.Initiator</ccts:DictionaryEntryName>
+<ccts:Definition>Zendende (opvragende) marktpartij (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>Zendende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ConsentID" minOccurs="0" maxOccurs="1" type="ccma:ContractDataRequestEnvelope_ConsentIDType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Portaal_Mutation.ConsentID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation.ConsentID</ccts:DictionaryEntryName>
+<ccts:Definition>Identificatie toestemmin t.b.v. opvraag toestemming door RNB bij LV. Max. 60 karakters (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Toestemmingssleutel</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Business Data Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ConsentIDType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ContractDataRequestEnvelope_ConsentIDType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#ConsentIDType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ConsentIDType</ccts:DictionaryEntryName>
+<ccts:Definition>Referentie ID van de machtiging (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Machtiging ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="60"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: DateTime ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ContractDataRequestEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#DateTime</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>DateTime</ccts:DictionaryEntryName>
+<ccts:Definition>Datum/tijd (dateTime) (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:dateTime"/>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GLNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ContractDataRequestEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#GLNEANCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GLNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Location Number (GLN) conform de Europese Artikel Nummering (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Global Location Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="13"/>
+<xsd:pattern value="[0-9]{13}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GSRNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ContractDataRequestEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#GSRNEANCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GSRNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Service Relation Number (GSRN) conform de Europese Artikel Nummering (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Global Service Relation Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="18"/>
+<xsd:pattern value="[0-9]{18}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: IBANKeyType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ContractDataRequestEnvelope_IBANKeyType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#IBANKeyType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>IBANKeyType</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+<xsd:pattern value="[0-9][0-9][0-9]"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Identifier ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ContractDataRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Identifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Identifier</ccts:DictionaryEntryName>
+<ccts:Definition>Identifier (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Indicator ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ContractDataRequestEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Indicator</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Indicator</ccts:DictionaryEntryName>
+<ccts:Definition>Indicator (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Indicator</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MonthDayType  ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ContractDataRequestEnvelope_MonthDayType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#MonthDayType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MonthDayType</ccts:DictionaryEntryName>
+<ccts:Definition>Maand dag (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Maand dag</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:gMonthDay"/>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Numeric ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ContractDataRequestEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Numeric</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Numeric</ccts:DictionaryEntryName>
+<ccts:Definition>Nummer (getal) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Nummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:decimal">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ReferenceTextType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ContractDataRequestEnvelope_ReferenceTextType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#ReferenceTextType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ReferenceTextType</ccts:DictionaryEntryName>
+<ccts:Definition>Referentie (string) (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Referentie tekst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="60"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Text ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ContractDataRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:contractdatarequest#Text</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Text</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Tekst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Business Code List Definitions ===== -->
+<!-- ================================================================== -->
+</xsd:schema>
